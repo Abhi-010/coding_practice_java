@@ -1,0 +1,19 @@
+package abstract_class_interfaces.interfaces;
+
+public class SuperMan implements FlightEnabled{
+
+    @Override
+    public void takeOff() {
+
+    }
+
+    @Override
+    public void land() {
+
+    }
+
+    @Override
+     public void fly(){
+
+    }
+}
