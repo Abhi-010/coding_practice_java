@@ -4,7 +4,7 @@ public class SuperMan implements FlightEnabled{
 
     @Override
     public void takeOff() {
-
+        System.out.println("Work done.. ");
     }
 
     @Override
