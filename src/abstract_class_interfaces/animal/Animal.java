@@ -20,6 +20,9 @@ public abstract class Animal {
     protected String type  ;
     private String size ;
     private double weight ;
+//    int age ;
+//    public String name ;
+//    public static String group ;
 
 
     public Animal(String type, String size, double weight) {
