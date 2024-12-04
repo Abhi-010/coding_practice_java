@@ -10,6 +10,9 @@ public class ClosureExample {
                 System.out.println(i+b);
             }
         });
+
+        doProcess(a,(i)-> System.out.println(i+b));
+
     }
     public static void doProcess(int i , Process process){
         process.process(i);

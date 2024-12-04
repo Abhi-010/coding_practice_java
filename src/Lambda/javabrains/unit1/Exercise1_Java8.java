@@ -1,11 +1,8 @@
-package Lambda.javabrains.unit2;
-
-import Lambda.javabrains.unit1.Person;
+package Lambda.javabrains.unit1;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Exercise1_Java8 {
@@ -29,16 +26,16 @@ public class Exercise1_Java8 {
         // printPeopleConditionally - input people, condition.
         // based on that condition people will get printed
 
-        printPeopleConditionally(people, ( p)-> p.getLastName().startsWith("C"), p-> System.out.println(p));
+        printPeopleConditionally(people,( p)-> p.getLastName().startsWith("C"));
 
-        printPeopleConditionally(people, ( p)-> p.getLastName().startsWith("A"),p-> System.out.println(p));
+        printPeopleConditionally(people,( p)-> p.getLastName().startsWith("A"));
     }
 
 
-    private static void printPeopleConditionally(List<Person> people, Predicate<Person> predicate, Consumer<Person> consumer) {
+    private static void printPeopleConditionally(List<Person> people, Condition condition) {
         for(Person person : people){
-            if(predicate.test(person)){
-               consumer.accept(person);
+            if(condition.test(person)){
+                System.out.println(person);
             }
         }
     }
@@ -49,5 +46,6 @@ public class Exercise1_Java8 {
         }
     }
 
+    
 }
 
